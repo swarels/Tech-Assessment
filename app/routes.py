@@ -10,7 +10,7 @@ def index():
 
 @main_routes.route('/add_shift', methods=['POST'])
 def add_shift():    
-    # Add a shift to the database 
+    # Add a shift to the database (ensure that it does not clash with an existing shift for that employee in the database)
     
     return redirect(url_for('main.index'))
 

@@ -1,7 +1,9 @@
 # ShiftScheduler
 
 ## Overview
-ShiftScheduler is a flexible code template designed to help businesses efficiently schedule and manage employee shifts. Your task is to build upon this foundation, enhancing its functionality to meet the specific needs outlined below. We encourage you to bring your creativity and unique approach to the project as you expand its capabilities.
+ShiftScheduler is a flexible code template designed to help businesses efficiently schedule and manage employee shifts. Your task is to build upon this foundation, enhancing its functionality to meet the specific needs outlined below. We encourage you to bring your creativity and unique approach to the project as you expand its capabilities.  To ensure an accurate assessment of your individual coding skills, please refrain from using LLMs such as ChatGPT during the development process.
+
+Please create a new branch before starting the development of your solution. When you're ready to submit, open a pull request with your changes.
 
 ### Functional Requirements
 
