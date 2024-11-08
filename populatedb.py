@@ -9,11 +9,13 @@ with app.app_context():
 
     shift1 = Shift(
         employee='John Doe',
+        role='Cashier', 
         start_time=datetime(2024, 10, 25, 9, 0),
         end_time=datetime(2024, 10, 25, 17, 0)
     )
     shift2 = Shift(
         employee='Jane Smith',
+        role='Manager',
         start_time=datetime(2024, 10, 25, 12, 0),
         end_time=datetime(2024, 10, 25, 20, 0)
     )

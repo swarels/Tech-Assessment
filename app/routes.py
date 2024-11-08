@@ -18,6 +18,7 @@ def add_shift():
         name = form.name.data
         start_time = form.start_time.data
         end_time = form.end_time.data
+        role = form.role.data
 
         # Add a shift to the database 
     

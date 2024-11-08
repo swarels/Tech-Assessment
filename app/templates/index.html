@@ -43,19 +43,24 @@
     <h2 class="mb-3">Add Shift</h2>
     <form method="post" action="{{ url_for('main.add_shift') }}" enctype="multipart/form-data">
         {{ form.csrf_token }}
-        <div class="mb-3">
+        <div class="mb-2">
             <label for="{{ form.name.id }}" class="form-label">{{ form.name.label }}</label>
             {{ form.name(class="form-control") }}
         </div>
+        <div class="mb-2">
+            <label for="{{ form.role.id }}" class="form-label">{{ form.role.label }}</label>
+            {{ form.role(class="form-control") }}
+        </div>
         <div class="mb-3">
             <label for="{{ form.start_time.id }}" class="form-label">{{ form.start_time.label }}</label>
-            {{ form.start_time(class="form-control") }}
+            <input type="datetime-local" name="start_time" id="{{ form.start_time.id }}" class="form-control" required>
         </div>
+        
         <div class="mb-3">
             <label for="{{ form.end_time.id }}" class="form-label">{{ form.end_time.label }}</label>
-            {{ form.end_time(class="form-control") }}
+            <input type="datetime-local" name="end_time" id="{{ form.end_time.id }}" class="form-control" required>
         </div>
-        <div class="mb-3">
+        <div class="mb-2">
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </form>
