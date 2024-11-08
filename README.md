@@ -48,8 +48,8 @@ ShiftScheduler is a flexible code template designed to help businesses efficient
 ### Step 1: Clone the repository
 First, clone the repository to your local machine:
 ```bash
-git clone https://github.com/yourusername/ShiftScheduler.git
-cd ShiftScheduler
+git clone https://github.com/ArborCarbon/Tech-Assessment.git
+cd Tech-Assessment
 ```
 
 ### Step 2: Create a Virtual Environment
