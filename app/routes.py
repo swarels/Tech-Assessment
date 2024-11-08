@@ -1,16 +1,25 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 from app.models import Shift
+from app.forms import AddShiftForm
 
 main_routes = Blueprint('main', __name__)
 
 @main_routes.route('/')
 def index():
     shifts = Shift.query.all() 
-    return render_template('index.html', shifts=shifts)
+    form = AddShiftForm()
+    return render_template('index.html', shifts=shifts, form=form)
 
 @main_routes.route('/add_shift', methods=['POST'])
 def add_shift():    
-    # Add a shift to the database (ensure that it does not clash with an existing shift for that employee in the database)
+    form = AddShiftForm()
+
+    if form.validate_on_submit():
+        name = form.name.data
+        start_time = form.start_time.data
+        end_time = form.end_time.data
+
+        # Add a shift to the database 
     
     return redirect(url_for('main.index'))
 

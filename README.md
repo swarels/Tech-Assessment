@@ -16,7 +16,7 @@ Please create a new branch before starting the development of your solution. Whe
 2. **Add a Shift**  
    - **Route**: `/add_shift`  
    - **Method**: `POST`  
-   - **Description**: Adds a new shift to the database using form data (employee name, start time, end time, role). Redirect to the main page after adding.
+   - **Description**: Adds a new shift to the database using form data (employee name, start time, end time, role). Ensure that the shift being added does not clash with an existing shift for the same employee. Redirect to the main page after adding.
 
 3. **Delete a Shift**  
    - **Route**: `/delete_shift`  
