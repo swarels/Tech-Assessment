@@ -25,6 +25,88 @@
 # Function Signature:
 '''def is_valid_parentheses(s: str) -> bool:'''
 
+def is_valid_parentheses(s):
+    print("This is the string:")
+    print(s)
+
+    # Initial Checks
+    if (len(s) % 2 or len(s) == 0):
+        return(False)
+    
+    
+    # Function to determine if two characters are corresponding opposites
+    def is_opp(c1, c2):
+        if (c1 == "("):
+            if (c2 == ")"):
+                return True
+            else:
+                return False
+        if (c1 == "{"):
+            if (c2 == "}"):
+                return True
+            else:
+                return False
+        if (c1 == "["):
+            if (c2 == "]"):
+                return True
+            else:
+                return False
+        if (c1 == ")"):
+            if (c2 == "("):
+                return True
+            else:
+                return False
+        if (c1 == "}"):
+            if (c2 == "{"):
+                return True
+            else:
+                return False
+        if (c1 == "]"):
+            if (c2 == "["):
+                return True
+            else:
+                return False
+        return("ERROR - UNKNOWN CHARACTER/CASE")
+
+
+    stack = []
+
+    for i in range(len(s)):
+        print("Index:", i, " character:", s[i])
+        print("Stack:", stack)
+        # Push the initial character
+        if (i == 0):
+            stack.append(s[i])
+            continue
+        
+        # If stack is empty, add and continue
+        if (len(stack) == 0):
+            stack.append(s[i])
+            continue
+        else:
+            if (is_opp(s[i], stack[-1])):
+                print("OPPOSITE")
+                stack.pop()
+            else:
+                stack.append(s[i])
+    
+    print("-------------------------")
+    print("Final length:", len(stack))
+    if (len(stack) == 0):
+        return(True)
+    return(False)
+
+
+print(is_valid_parentheses("([{()}])(([{]}))"))
+
+
+## I am not too sure if the question explains whether or not concatenated nested parentheses are valid
+## For example "()[]"
+## I have taken into assumption that this IS VALID, and thus added into my code a check for this
+## on line 82, checking if the stack is empty first. 
+## If these sorts of strings are NOT VALID, please ignore these lines
+## That check could be voided, and the string "()[]" would return FALSE instead
+
 # Input: 
 # s: A string containing only the characters (, ), {, }, [, and ].
 
